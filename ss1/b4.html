@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+const books = [
+{ id: 1, name: "Sách 1" },
+{ id: 2, name: "Sách 2" },
+{ id: 3, name: "Sách 3" },
+{ id: 4, name: "Sách 4" }
+];
+function findBookById(bookId, booksArray) {
+const foundBook = booksArray.find(book => book.id === bookId);
+return foundBook ? foundBook : null;
+}
+
+const bookIdToFind = 3; 
+const foundBook = findBookById(bookIdToFind, books);
+
+if (foundBook) {
+console.log("Tìm thấy sách với ID:", foundBook.id, "Tên sách:", foundBook.name);
+} else {
+console.log("Không tìm thấy sách với ID:", bookIdToFind);
+}
+
+    </script>
+  </body>
+</html>
